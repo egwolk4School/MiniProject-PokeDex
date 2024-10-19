@@ -5,6 +5,9 @@ import { useState, useEffect, useCallback, useMemo } from "react"
 import axios from 'axios'
 
 export const Dex = () => {
+  useEffect(()=>{
+    document.title='PokeDex | Home'
+},[])
   const [allPokemon, setAllPokemon] = useState([])
   const [filteredPokemon, setFilteredPokemon] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
@@ -19,7 +22,7 @@ export const Dex = () => {
     const controller = new AbortController()
     setLoading(true)
     try {
-      const url = `https://pokeapi.co/api/v2/pokemon?limit=10300` 
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=10277` 
       const res = await axios.get(url, { signal: controller.signal })
 
       if (res.status < 200 || res.status > 299) {

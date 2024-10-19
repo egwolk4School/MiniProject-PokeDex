@@ -7,7 +7,7 @@
 }
 
 .pokeMsg{
-    height: calc(100vh - 4rem);
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;

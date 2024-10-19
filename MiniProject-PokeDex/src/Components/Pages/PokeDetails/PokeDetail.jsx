@@ -5,6 +5,7 @@ import { determineRegion } from '../PokeDex/DexComponents'
 
 
 export const PokeDetail = () => {
+  
   const { id } = useParams()
   const [pokemon, setPokemon] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -28,30 +29,33 @@ export const PokeDetail = () => {
   useEffect(() => {
     const fetchPokemonDetail = async () => {
       try {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        const nationalDexNumber = res.data.id
-        const region = determineRegion(nationalDexNumber)
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const nationalDexNumber = res.data.id;
+        const region = determineRegion(nationalDexNumber);
   
-        const speciesRes = await axios.get(res.data.species.url)
-        const evolutionChainUrl = speciesRes.data.evolution_chain.url
+        const speciesRes = await axios.get(res.data.species.url);
+        const evolutionChainUrl = speciesRes.data.evolution_chain.url;
   
-        const evolutionChainRes = await axios.get(evolutionChainUrl)
-        const evolutionsData = await extractEvolutions(evolutionChainRes.data.chain)
+        const evolutionChainRes = await axios.get(evolutionChainUrl);
+        const evolutionsData = await extractEvolutions(evolutionChainRes.data.chain);
   
-        const varietyData = await fetchVarietySprites(speciesRes.data.varieties) 
+        const varietyData = await fetchVarietySprites(speciesRes.data.varieties);
   
-        setPokemon({ ...res.data, region })
-        setEvolutions(evolutionsData)
-        setForms(varietyData) 
+        setPokemon({ ...res.data, region });
+        setEvolutions(evolutionsData);
+        setForms(varietyData);
+  
+        // Set document title with Pokémon name
+        document.title = `Pokedex | ${res.data.name.charAt(0).toUpperCase() + res.data.name.slice(1)}`;
       } catch {
-        setError('Failed to fetch Pokémon details')
+        setError('Failed to fetch Pokémon details');
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
   
-    fetchPokemonDetail()
-  }, [id])
+    fetchPokemonDetail();
+  }, [id]);
   
 
   
