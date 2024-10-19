@@ -1,0 +1,10 @@
+.card{
+    background-color: aquamarine;
+    border: solid black .1rem;
+    text-align: center;
+    height: 100%;
+}
+
+.card img{
+    width: 100px;
+}

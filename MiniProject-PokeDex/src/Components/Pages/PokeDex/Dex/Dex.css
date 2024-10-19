@@ -1,0 +1,15 @@
+.cardsAll{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    gap:15px;
+    justify-content: center;
+    
+}
+
+.pokeMsg{
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
