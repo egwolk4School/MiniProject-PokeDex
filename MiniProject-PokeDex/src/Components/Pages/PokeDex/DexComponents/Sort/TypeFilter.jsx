@@ -27,7 +27,7 @@ export const TypeFilter = ({
 
   return (
     <div className="section">
-      <label htmlFor="type-select">Select Type:</label>
+      <label htmlFor="type-select">Type:</label>
       <select
         id="type-select"
         value={selectedType}

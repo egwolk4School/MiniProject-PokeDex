@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-
+import '../DexComp.css'
 export const Pagination = ({
     current = 1,
     totalItems = 0,
@@ -39,7 +39,7 @@ export const Pagination = ({
             {current < totalPages && (
                 <>
                     <button onClick={() => onPageChange(current + 1)}>{'>'}</button>
-                    <button onClick={() => onPageChange(totalPages)}>{'>>'}</button>
+                    <button onClick={() => onPageChange(totalPages)} className=''>{'>>'}</button>
                 </>
             )}
         </div>

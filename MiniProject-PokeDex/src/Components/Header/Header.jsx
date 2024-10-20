@@ -7,7 +7,7 @@ export const Header = () => {
     const [menuOpen,setMenuOpen] = useState(false)
   return (
     <nav>
-        <Link to='/' className='title' >PokingEnaMo{'<'}3</Link>
+        <Link to='/' className='title' >PokeDex</Link>
         
         <div className="menu" onClick={()=>{
             setMenuOpen(!menuOpen)

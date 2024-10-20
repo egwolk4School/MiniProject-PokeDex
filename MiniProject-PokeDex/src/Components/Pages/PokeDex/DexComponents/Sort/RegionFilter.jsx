@@ -23,7 +23,7 @@ export const RegionFilter = ({
 
   return (
     <div className="section">
-      <label htmlFor="region-select">Select Region:</label>
+      <label htmlFor="region-select">Region:</label>
       <select
         id="region-select"
         value={selectedRegion}

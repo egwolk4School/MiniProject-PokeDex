@@ -1,0 +1,70 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('../../../assets/digital-7.ttf');
+   }
+
+.poke, span:first-letter{
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h1{
+    font-family: 'digital-clock-font';
+    font-size: 50px;
+}
+
+h3{
+    font-family: 'digital-clock-font';
+    font-size: 40px;
+}
+
+span{
+    font-family: 'digital-clock-font';
+    font-size: 20px;
+}
+li.evol{
+    font-family:'digital-clock-font';
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    background-color: #27A4F3;
+    border-radius: 20%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.deets{
+    margin: 1rem 0;
+    background-color: #FF0000;
+    border-color: black;
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    width: 50%;
+    border-radius: 15px;
+}
+
+
+li{
+    list-style-type: none;
+    /* font-family: 'digital-clock-font'; */
+}
+ul.evol{
+    list-style-type: none;
+     
+}
+
+.info, #info{
+    padding: 0;
+    font-family: 'digital-clock-font';
+    font-size: 28px;
+}
+.poke-detail, .load{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+}

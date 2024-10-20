@@ -1,5 +1,13 @@
+import './Footer.css'
+
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+
+    <p>
+    &copy; {new Date().getFullYear
+        ()} Pokedex || Stephen Robles & Erin Covacha
+    </p>
+</footer>
   )
 }

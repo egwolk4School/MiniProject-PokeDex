@@ -33,13 +33,13 @@ export const Cards = ({
             const cardColor = typeColors[firstType] || '#FFFFFF'
             const imageUrl = p.sprite ? p.sprite : 'src/assets/pokeball.png'
             return (
-                <Link to={`/pokemon/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }} key={p.id}>
+                <Link to={`/pokemon/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }} key={p.id} className='cardout'>
                   <div  className='card' style={{ backgroundColor: cardColor }}>
-                  {p.id} <br />
+                  <span>{p.id}</span> <br />
                   <img src={imageUrl} alt={p.name} /> <br />
-                  {p.name} <br />
-                  {p.type.join(' ')} <br />
-                  {p.region}
+                  <span>{p.name}</span> <br />
+                  <span>{p.type.join(' ')} </span><br />
+                  <span>{p.region}</span>
                 </div>
                 </Link>
             )

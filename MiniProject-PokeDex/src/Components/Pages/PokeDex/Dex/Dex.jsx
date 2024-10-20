@@ -3,6 +3,7 @@ import './Dex.css'
 import { useDebounce } from 'use-debounce'
 import { useState, useEffect, useCallback, useMemo } from "react"
 import axios from 'axios'
+import logo from '../../../../assets/loading.gif'
 
 export const Dex = () => {
   useEffect(()=>{
@@ -102,6 +103,7 @@ export const Dex = () => {
           onSearchClick={handleSearchClick} 
         />
       </div>
+      <div className="filterz">
       <RegionFilter
         selectedRegion={selectedRegion}
         setSelectedRegion={setSelectedRegion}
@@ -110,9 +112,10 @@ export const Dex = () => {
         selectedType={selectedType}
         setSelectedType={setSelectedType}
       />
+      </div>
       <div className="section">
         {loading ? (
-          <div className="pokeMsg">Loading...</div>
+          <div className="pokeMsg"><img src={logo} alt="" /></div>
         ) : currentPokemon.length > 0 ? (
           <div className="cardsAll">
             <Cards pokemon={currentPokemon} />

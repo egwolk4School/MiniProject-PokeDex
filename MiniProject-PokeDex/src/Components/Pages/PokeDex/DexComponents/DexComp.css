@@ -1,0 +1,31 @@
+.search{
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+   
+}
+.search :placeholder-shown{
+    color: white;
+}
+
+button{
+    padding: 0.5rem;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    border-radius: 25%;
+    margin: 5px;
+    border-color: white;
+}
+
+select{
+    padding: 0.5rem;
+    font-size: 15px;
+    margin: 5px;
+    border: white solid ;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+
+}

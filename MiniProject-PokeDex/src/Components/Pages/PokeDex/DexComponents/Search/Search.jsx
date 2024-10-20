@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import '../DexComp.css'
 export const Search = ({
     search='',
     setSearch='',
@@ -16,7 +17,7 @@ export const Search = ({
     value={search}
     onChange={(e) => setSearch(e.target.value)} 
     onKeyDown={handleSearch}
-    />
+    className="search"/>
     
     </>
   )
